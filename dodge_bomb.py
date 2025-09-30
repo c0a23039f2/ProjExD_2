@@ -45,11 +45,12 @@ def gameover(screen: pg.Surface) -> None:
      screen.blit(go_img, left_img_rect)
      screen.blit(go_img, right_img_rect)
 
-
-
-
      pg.display.update()
 
+def init_bb_images() -> tuple[list[pg.Surface], list[int]]:
+    for r in range(1, 11):
+        bbimg = pg.Surface((20*r, ))
+        #途中
 
 
 def main():
