@@ -46,6 +46,8 @@ def gameover(screen: pg.Surface) -> None:
      screen.blit(go_img, right_img_rect)
 
      pg.display.update()
+     
+     time.sleep(5)
 
 def init_bb_images() -> tuple[list[pg.Surface], list[int]]:
     for r in range(1, 11):
@@ -76,7 +78,6 @@ def main():
         screen.blit(bg_img, [0, 0]) 
         if kk_rct.colliderect(bb_rct):  # こうかとんと爆弾の衝突判定
             gameover(screen)
-            time.sleep(5)
             return
 
         key_lst = pg.key.get_pressed()
